@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  background-color: red;
+}
+
+.gameContainer {
+  background-image: url("/images/bg.png");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  width: 100%;
+  height: 100vh;
+}
+
+.dino {
+  background-image: url(/images/dino.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 194px;
+  height: 149px;
+  position: absolute;
+  bottom: -52px;
+  left: 52px;
+}
+
+.dinoAni {
+  animation: dinoAni 0.7s ease-in;
+}
+
+.obstacleAni {
+  animation: obstacleAni 5s linear infinite;
+}
+
+.obstacle {
+  background-image: url(/images/dragon.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 138px;
+  height: 144px;
+  position: absolute;
+  bottom: -53px;
+  right: 50px;
+}
+
+#scorecont {
+  font-size: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: rgb(89, 95, 95, 0.7);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+}
+
+.gameOver {
+  font-size: 50px;
+  position: absolute;
+  left: 25%;
+  top: 30%;
+  background-color: rgb(89, 95, 95, 0.7);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+#restartBtn {
+  position: absolute;
+  font-size: 25px;
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 7px;
+  right: 20px;
+  top: 150px;
+  cursor: pointer;
+}
+
+#restartBtn:hover {
+  background-color: #fa4f4c;
+}
+
+#musicBtn {
+  position: absolute;
+  font-size: 25px;
+  background-color: rgb(255, 140, 0);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 7px;
+  right: 20px;
+  top: 90px;
+  cursor: pointer;
+}
+
+#musicBtn:hover {
+  background-color: #fab318;
+}
+
+@keyframes dinoAni {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 300px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@keyframes obstacleAni {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: -20vw;
+  }
+}
