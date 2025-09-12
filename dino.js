@@ -1,8 +1,8 @@
 score = 0;
 cross = true;
 
-let jmpMusic = new Audio("/music/cartoon-jump-6462.mp3");
-let endMusic = new Audio("/music/jump-scare-scream-82738.mp3");
+let jmpMusic = new Audio("music/cartoon-jump-6462.mp3");
+let endMusic = new Audio("music/jump-scare-scream-82738.mp3");
 
 function stopMusic() {
   endMusic.play();
@@ -95,7 +95,7 @@ function updateScore(score) {
   scorecont.innerHTML = "your score: " + score;
 }
 
-let bgMusic = new Audio("/music/music.mp3");
+let bgMusic = new Audio("music/music.mp3");
 bgMusic.loop = true;
 
 window.onload = function () {
