@@ -18,6 +18,6 @@ Inspired by the famous **Google Chrome Dinosaur Game**, this project lets you ju
 
 
 ## 🔗 Live Demo  
-[🌐 Click here to view](http://127.0.0.1:5500/dino.html)
+[🌐 Click here to view](https://harshsaini-10.github.io/Dino-Game/)
 
 
