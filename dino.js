@@ -60,6 +60,10 @@ gameScreen.addEventListener("touchstart", function () {
   jump();
 });
 
+gameScreen.addEventListener("click", function () {
+  jump();
+});
+
 
 
 
