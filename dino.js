@@ -20,7 +20,11 @@ document.onkeydown = function (e) {
 
   if (e.keyCode === 38) {
     // jmpMusic.play();
-    jump();
+    dino = document.querySelector(".dino");
+    dino.classList.add("dinoAni");
+    setTimeout(() => {
+      dino.classList.remove("dinoAni");
+    }, 700);
   }
   if (e.keyCode == 39) {
     dino = document.querySelector(".dino");
@@ -40,20 +44,25 @@ document.onkeydown = function (e) {
 
 let dino = document.querySelector(".dino");
 
+// Jump function (same for desktop + mobile)
 function jump() {
-  if (!dino.classList.contains("dinoAni")) {
+ dino = document.querySelector(".dino");
     dino.classList.add("dinoAni");
     setTimeout(() => {
       dino.classList.remove("dinoAni");
-    }, 700); // jump duration
-  }
+    }, 700);
 }
+
 
 // 📱 Mobile: Screen tap se jump
 let gameScreen = document.querySelector(".gameContainer");
 gameScreen.addEventListener("touchstart", function () {
   jump();
 });
+
+
+
+
 
 // Restart Functionality
 
