@@ -10,7 +10,7 @@ function stopMusic() {
 }
 
 document.onkeydown = function (e) {
-  console.log("key code is: ", e.keyCode);
+  // console.log("key code is: ", e.keyCode);
   if (e.keyCode === 82) {
     score = 0;
     updateScore(score);
@@ -20,11 +20,7 @@ document.onkeydown = function (e) {
 
   if (e.keyCode === 38) {
     // jmpMusic.play();
-    dino = document.querySelector(".dino");
-    dino.classList.add("dinoAni");
-    setTimeout(() => {
-      dino.classList.remove("dinoAni");
-    }, 700);
+    jump();
   }
   if (e.keyCode == 39) {
     dino = document.querySelector(".dino");
@@ -41,6 +37,23 @@ document.onkeydown = function (e) {
     dino.style.left = dinox - 112 + "px";
   }
 };
+
+let dino = document.querySelector(".dino");
+
+function jump() {
+  if (!dino.classList.contains("dinoAni")) {
+    dino.classList.add("dinoAni");
+    setTimeout(() => {
+      dino.classList.remove("dinoAni");
+    }, 700); // jump duration
+  }
+}
+
+// 📱 Mobile: Screen tap se jump
+let gameScreen = document.querySelector(".gameContainer");
+gameScreen.addEventListener("touchstart", function () {
+  jump();
+});
 
 // Restart Functionality
 
