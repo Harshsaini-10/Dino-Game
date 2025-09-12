@@ -1,11 +1,11 @@
 score = 0;
 cross = true;
 
-let jmpMusic = new Audio("music/cartoon-jump-6462.mp3");
-let endMusic = new Audio("music/jump-scare-scream-82738.mp3");
+// let jmpMusic = new Audio("music/cartoon-jump-6462.mp3");
+// let endMusic = new Audio("music/jump-scare-scream-82738.mp3");
 
 function stopMusic() {
-  endMusic.play();
+  // endMusic.play();
   endMusic.currentTime = 0;
 }
 
@@ -19,7 +19,7 @@ document.onkeydown = function (e) {
   }
 
   if (e.keyCode === 38) {
-    jmpMusic.play();
+    // jmpMusic.play();
     dino = document.querySelector(".dino");
     dino.classList.add("dinoAni");
     setTimeout(() => {
@@ -98,16 +98,16 @@ function updateScore(score) {
 let bgMusic = new Audio("music/music.mp3");
 bgMusic.loop = true;
 
-window.onload = function () {
-  bgMusic.play().catch((error) => {
-    console.log("Autoplay blocked! User interaction needed.", error);
-  });
-};
+// window.onload = function () {
+//   bgMusic.play().catch((error) => {
+//     console.log("Autoplay blocked! User interaction needed.", error);
+//   });
+// };
 
-function toggleMusic() {
-  if (bgMusic.paused) {
-    bgMusic.play();
-  } else {
-    bgMusic.pause();
-  }
-}
+// function toggleMusic() {
+//   if (bgMusic.paused) {
+//     bgMusic.play();
+//   } else {
+//     bgMusic.pause();
+//   }
+// }
